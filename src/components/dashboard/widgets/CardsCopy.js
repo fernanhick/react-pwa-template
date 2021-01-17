@@ -15,6 +15,7 @@ import FavoriteIcon from '@material-ui/icons/Favorite';
 import ShareIcon from '@material-ui/icons/Share';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
+import {gql, useQuery} from '@apollo/react-hooks';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -39,11 +40,51 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 const tradeWs = new WebSocket('wss://ws.coincap.io/trades/binance');
+
 tradeWs.onmessage = function (msg) {
   /*   console.log(msg.data);
    */
 };
-export const Cards = () => {
+
+const DAI_QUERY = gql`
+  query tokens($tokenAddress: Bytes!) {
+    tokens(where: {id: $tokenAddress}) {
+      derivedETH
+      totalLiquidity
+    }
+  }
+`;
+const TOKENS_QUERY = gql`
+  query tokens {
+    id
+    derivedETH
+    totalLiquidity
+  }
+`;
+
+const ETH_PRICE_QUERY = gql`
+  query bundles {
+    bundles(where: {id: "1"}) {
+      ethPrice
+    }
+  }
+`;
+
+export const CardsCopy = () => {
+  const {loading: ethLoading, data: ethPriceData} = useQuery(ETH_PRICE_QUERY, {
+    pollInterval: 300,
+  });
+  const {loading: daiLoading, data: daiData} = useQuery(DAI_QUERY, {
+    variables: {
+      tokenAddress: '0x6b175474e89094c44da98b954eedeac495271d0f',
+    },
+    pollInterval: 300,
+  });
+
+  const daiPriceInEth = daiData && daiData.tokens[0].derivedETH;
+  const daiTotalLiquidity = daiData && daiData.tokens[0].totalLiquidity;
+  const ethPriceInUSD = ethPriceData && ethPriceData.bundles[0].ethPrice;
+
   const classes = useStyles();
   const [expanded, setExpanded] = React.useState(false);
 
@@ -51,14 +92,12 @@ export const Cards = () => {
     setExpanded(!expanded);
   };
 
-  const tokensList = ['bitcoin', 'litecoin', 'ethereum', 'chainlink'];
-
   return (
     <Card className={classes.root}>
       <CardHeader
         avatar={
           <Avatar aria-label="recipe" className={classes.avatar}>
-            BTC
+            R
           </Avatar>
         }
         action={
@@ -66,7 +105,7 @@ export const Cards = () => {
             <MoreVertIcon />
           </IconButton>
         }
-        title="Shrimp and Chorizo Paella"
+        title={parseFloat(ethPriceInUSD).toFixed(2)}
         subheader="September 14, 2016"
       />
       <CardMedia

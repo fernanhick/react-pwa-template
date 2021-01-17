@@ -1,24 +1,24 @@
-import styled from "styled-components";
-import { Link as LinkR } from "react-router-dom";
-import { render } from "react-dom";
-import { ApolloClient } from "apollo-client";
-import { InMemoryCache } from "apollo-cache-inmemory";
-import { HttpLink } from "apollo-link-http";
-import { gql, useQuery } from "@apollo/react-hooks";
+import styled from 'styled-components';
+import {Link as LinkR} from 'react-router-dom';
+import {render} from 'react-dom';
+import {ApolloClient} from 'apollo-client';
+import {InMemoryCache} from 'apollo-cache-inmemory';
+import {HttpLink} from 'apollo-link-http';
+import {gql, useQuery} from '@apollo/react-hooks';
 
 export const client = new ApolloClient({
   link: new HttpLink({
-    uri: "https://api.thegraph.com/subgraphs/name/uniswap/uniswap-v2",
+    uri: 'https://api.thegraph.com/subgraphs/name/uniswap/uniswap-v2',
   }),
   fetchOptions: {
-    mode: "no-cors",
+    mode: 'no-cors',
   },
   cache: new InMemoryCache(),
 });
 
 const DAI_QUERY = gql`
   query tokens($tokenAddress: Bytes!) {
-    tokens(where: { id: $tokenAddress }) {
+    tokens(where: {id: $tokenAddress}) {
       derivedETH
       totalLiquidity
     }
@@ -34,21 +34,33 @@ const TOKENS_QUERY = gql`
 
 const ETH_PRICE_QUERY = gql`
   query bundles {
-    bundles(where: { id: "1" }) {
+    bundles(where: {id: "1"}) {
       ethPrice
     }
   }
 `;
+export const DashboardContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+`;
+
+export const CardsContainer = styled.div`
+  display: flex;
+  align-items: center;
+  padding: 7%;
+  background: rgba(255, 255, 255, 0.404);
+`;
+
 export const DashboardItem = () => {
-  const { loading: ethLoading, data: ethPriceData } = useQuery(
-    ETH_PRICE_QUERY,
-    {
-      pollInterval: 300,
-    }
-  );
-  const { loading: daiLoading, data: daiData } = useQuery(DAI_QUERY, {
+  const {loading: ethLoading, data: ethPriceData} = useQuery(ETH_PRICE_QUERY, {
+    pollInterval: 300,
+  });
+  const {loading: daiLoading, data: daiData} = useQuery(DAI_QUERY, {
     variables: {
-      tokenAddress: "0x6b175474e89094c44da98b954eedeac495271d0f",
+      tokenAddress: '0x6b175474e89094c44da98b954eedeac495271d0f',
     },
     pollInterval: 300,
   });
@@ -66,35 +78,35 @@ export const DashboardItem = () => {
   }, 3000);
  */
   return (
-    <div className="card-container">
+    <>
       <div className="card-title">TOKEN CARDS</div>
       <div className="card-body">
         <h2>
-          Dai price:{" "}
+          Dai price:{' '}
           {ethLoading || daiLoading
-            ? "Loading token data..."
-            : "$" +
+            ? 'Loading token data...'
+            : '$' +
               // parse responses as floats and fix to 2 decimals
               (parseFloat(daiPriceInEth) * parseFloat(ethPriceInUSD)).toFixed(
                 2
               )}
         </h2>
         <h2>
-          Eth price:{" "}
+          Eth price:{' '}
           {ethLoading || daiLoading
-            ? "Loading token data..."
-            : "$" +
+            ? 'Loading token data...'
+            : '$' +
               // parse responses as floats and fix to 2 decimals
               parseFloat(ethPriceInUSD).toFixed(2)}
         </h2>
         <h2>
-          Dai total liquidity:{" "}
+          Dai total liquidity:{' '}
           {daiLoading
-            ? "Loading token data..."
+            ? 'Loading token data...'
             : // display the total amount of DAI spread across all pools
               parseFloat(daiTotalLiquidity).toFixed(0)}
         </h2>
       </div>
-    </div>
+    </>
   );
 };

@@ -1,21 +1,12 @@
-import React, { useState, useEffect } from "react";
-import { fetchWeather } from "./api/fetchWeather";
-import "./App.css";
-
-import Navbar from "./components/Navbar";
-import { BrowserRouter as Router } from "react-router-dom";
-import {
-  Dashboard,
-  DashboardItem,
-} from "./components/dashboard/DashboardElements";
-import { Cards } from "./components/dashboard/widgets/Cards";
+import React, {useState, useEffect} from 'react';
+import './App.css';
+import {BrowserRouter as Router} from 'react-router-dom';
+import Home from './pages';
 
 const App = () => {
   return (
     <Router>
-      {" "}
-      <Navbar />
-      <div className="main-container"></div>
+      <Home />
     </Router>
   );
 };

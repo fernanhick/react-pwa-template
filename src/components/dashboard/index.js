@@ -1,17 +1,19 @@
-import { gql, HttpLink, InMemoryCache, useQuery } from "@apollo/react-hooks";
-import ApolloClient from "apollo-client";
-import React from "react";
-import { DashboardContainer, DashboardItem } from "./DashboardElements";
-import RecipeReviewCard, { Cards } from "./widgets/Cards";
-
+import React from 'react';
+import {
+  DashboardContainer,
+  DashboardItem,
+  CardsContainer,
+} from './DashboardElements';
+import RecipeReviewCard, {Cards} from './widgets/Cards';
+import {CardsCopy} from './widgets/CardsCopy';
 const Dashboard = () => {
   return (
-    <Dashboard>
-      <DashboardContainer>
-        <DashboardItem />
+    <DashboardContainer>
+      <CardsContainer>
         <Cards />
-      </DashboardContainer>
-    </Dashboard>
+        <CardsCopy />
+      </CardsContainer>
+    </DashboardContainer>
   );
 };
 
