@@ -2,6 +2,17 @@ html,
 body,
 #root {
     margin: 0;
+    --blue: #175375;
+    --light-blue: #6c63ff;
+    --green: #beb207;
+    --black: #010606;
+    --light-text: #f7f8fa;
+    --dark-text: rgb(0, 0, 0);
+    /* The BG defines most of the theme */
+    /* Primary covers primary color for */
+    --primary: rgb(81, 3, 83);
+    --secondary: rgba(255, 208, 255, 0.973);
+    --light-bg: rgb(255, 0, 212);
 }
 
 .card-title {
@@ -18,7 +29,7 @@ body,
     padding: 5px;
     border-radius: 15px;
     background: rgba(255, 255, 255, 0.404);
-    box-shadow: 5px 7px 12px #000000;
+    box-shadow: 5px 7px 12px #010606;
 }
 .card-body {
     outline: none;

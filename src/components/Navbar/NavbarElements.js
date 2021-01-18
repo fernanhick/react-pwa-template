@@ -3,15 +3,15 @@ import {Link as LinkR} from 'react-router-dom';
 import {Link as LinkS} from 'react-scroll';
 
 export const Nav = styled.nav`
-  background: #000;
+  background: var(--primary);
   height: 80px;
-  /*   margin-top: -80px;
- */
+  margin-top: -80px;
+
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 1rem;
-  position: sitcky;
+  position: sticky;
   top: 0;
   z-index: 10;
   @media screen and (max-width: 960px) {
@@ -89,10 +89,10 @@ export const NavBtn = styled.nav`
 
 export const NavBtnLink = styled(LinkR)`
   border-radius: 50px;
-  background: #01bf71;
+  background: var(--secondary);
   white-space: nowrap;
   padding: 10px 22px;
-  color: #010606;
+  color: var(--black);
   font-size: 16px;
   outline: none;
   cursor: pointer;
@@ -103,11 +103,16 @@ export const NavBtnLink = styled(LinkR)`
   &:hover {
     transition: all 0.2s ease-in-out;
     background: #fff;
-    color: #010606;
+    color: var(--black);
+    transform: scale(1.02);
+    box-shadow: 5px 7px 12px #010606;
   }
 `;
 export const NavItem = styled.li`
   height: 80px;
+  &:hover {
+    transition: all 0.2s ease-in-out;
+
 `;
 export const NavLinks = styled(LinkS)`
   color: #fff;
@@ -119,6 +124,6 @@ export const NavLinks = styled(LinkS)`
   text-decoration: none;
 
   &.active {
-    border-bottom: 3px solid #01bf71;
+    border-bottom: 3px solid var(--primary);
   }
 `;
