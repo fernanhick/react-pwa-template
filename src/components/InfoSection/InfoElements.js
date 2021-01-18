@@ -29,9 +29,9 @@ export const InfoRow = styled.div`
   grid-template-areas: ${({imgStart}) =>
     imgStart ? `'col2 col1'` : `'col1 col2'`};
 
-  @media screen and (max-width: 768) {
+  @media screen and (max-width: 768px) {
     grid-template-areas: ${({imgStart}) =>
-      imgStart ? `'col1 col2'` : `'col1 col1''col2 col2'`};
+      imgStart ? `'col1 col1''col2 col2'` : `'col2 col2 ''col1 col1'`};
   }
 `;
 
@@ -86,7 +86,6 @@ export const Subtitle = styled.p`
 export const BtnWrap = styled.div`
   display: flex;
   justify-content: center;
-  /* background: ${({lightBg}) => (lightBg ? '#f9f9f9' : ' var(--black)')}; */
 `;
 
 export const ImgWrap = styled.div`

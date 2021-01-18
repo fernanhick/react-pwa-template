@@ -25,7 +25,6 @@ export const NavbarContainer = styled.div`
   z-index: 1;
   width: 100%;
   padding: 0 24px;
-  max-width: 1100px;
 `;
 export const NavbarLogo = styled(LinkR)`
   color: #fff;
@@ -110,9 +109,6 @@ export const NavBtnLink = styled(LinkR)`
 `;
 export const NavItem = styled.li`
   height: 80px;
-  &:hover {
-    transition: all 0.2s ease-in-out;
-
 `;
 export const NavLinks = styled(LinkS)`
   color: #fff;
@@ -122,8 +118,10 @@ export const NavLinks = styled(LinkS)`
   height: 100%;
   align-items: center;
   text-decoration: none;
-
-  &.active {
-    border-bottom: 3px solid var(--primary);
+  &:hover {
+    border-bottom: 3px solid var(--secondary);
+  }
+  &:active {
+    border-bottom: 3px solid var(--secondary);
   }
 `;

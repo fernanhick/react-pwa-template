@@ -2,40 +2,14 @@ html,
 body,
 #root {
     margin: 0;
-    --blue: #175375;
-    --light-blue: #6c63ff;
-    --green: #beb207;
+
+    /* THEME SETTINGS */
     --black: #010606;
     --light-text: #f7f8fa;
     --dark-text: rgb(0, 0, 0);
     /* The BG defines most of the theme */
     /* Primary covers primary color for */
-    --primary: rgb(81, 3, 83);
-    --secondary: rgba(255, 208, 255, 0.973);
-    --light-bg: rgb(255, 0, 212);
-}
-
-.card-title {
-    outline: none;
-    padding: 5px 7%;
-    border-radius: 15px;
-    border: none;
-    margin-bottom: 5%;
-    background: rgba(194, 194, 194, 0.85);
-}
-.card-container {
-    background: #000000;
-    outline: none;
-    padding: 5px;
-    border-radius: 15px;
-    background: rgba(255, 255, 255, 0.404);
-    box-shadow: 5px 7px 12px #010606;
-}
-.card-body {
-    outline: none;
-    padding: 2px 7%;
-    border-radius: 15px;
-    border: none;
-    margin-bottom: 5%;
-    background: rgba(194, 194, 194, 0.85);
+    --primary: rgb(0, 23, 99);
+    --secondary: rgba(0, 255, 242, 0.973);
+    --light-bg: rgb(205, 255, 214);
 }
