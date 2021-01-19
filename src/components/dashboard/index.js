@@ -4,17 +4,15 @@ import {
   DashboardItem,
   CardsContainer,
 } from './DashboardElements';
-import RecipeReviewCard, {Cards} from './widgets/Cards';
-import {CardsCopy} from './widgets/CardsCopy';
-const Dashboard = () => {
+import RecipeReviewCard, {Cards} from './Cards';
+const Dashboard1 = () => {
   return (
     <DashboardContainer>
       <CardsContainer>
         <Cards />
-        <CardsCopy />
       </CardsContainer>
     </DashboardContainer>
   );
 };
 
-export default Dashboard;
+export default Dashboard1;

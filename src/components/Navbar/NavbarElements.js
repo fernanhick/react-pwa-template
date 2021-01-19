@@ -6,7 +6,6 @@ export const Nav = styled.nav`
   background: var(--primary);
   height: 80px;
   margin-top: -80px;
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -24,10 +23,12 @@ export const NavbarContainer = styled.div`
   height: 80px;
   z-index: 1;
   width: 100%;
+  max-width: 1300px;
+
   padding: 0 24px;
 `;
 export const NavbarLogo = styled(LinkR)`
-  color: #fff;
+  color: var(--light-text);
   justify-self: flex-start;
   cursor: pointer;
   font-size: 1.5rem;
@@ -48,11 +49,11 @@ export const MobileIcon = styled.div`
     transform: translate(-100%, 60%);
     font-size: 1.8rem;
     cursor: pointer;
-    color: #fff;
+    color: var(--light-text);
   }
 `;
 export const FaBars = styled(LinkR)`
-  color: #fff;
+  color: var(--light-text);
   justify-self: flex-start;
   cursor: pointer;
   font-size: 1.5rem;
@@ -85,13 +86,20 @@ export const NavBtn = styled.nav`
     display: none;
   }
 `;
+export const SwitchWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+`;
 
 export const NavBtnLink = styled(LinkR)`
   border-radius: 50px;
   background: var(--secondary);
   white-space: nowrap;
   padding: 10px 22px;
-  color: var(--black);
+  color: var(--dark-text);
   font-size: 16px;
   outline: none;
   cursor: pointer;
@@ -100,18 +108,24 @@ export const NavBtnLink = styled(LinkR)`
   text-decoration: none;
 
   &:hover {
-    transition: all 0.2s ease-in-out;
-    background: #fff;
-    color: var(--black);
+    transition: 100 0.2s ease-in-out;
     transform: scale(1.02);
-    box-shadow: 5px 7px 12px #010606;
+    box-shadow: ${({primary}) =>
+      primary
+        ? `3px 3px 5px var(--secondary)`
+        : `
+     5px 5px 8px var(--primary)`};
+
+    background: ${({primary}) =>
+      primary ? 'var(--primary)' : 'var(--secondary)'};
+    color: ${({dark}) => (dark ? 'var(--light-text)' : ' var(--dark-text)')};
   }
 `;
 export const NavItem = styled.li`
   height: 80px;
 `;
 export const NavLinks = styled(LinkS)`
-  color: #fff;
+  color: var(--light-text);
   cursor: pointer;
   display: flex;
   padding: 0 1rem;
@@ -119,9 +133,6 @@ export const NavLinks = styled(LinkS)`
   align-items: center;
   text-decoration: none;
   &:hover {
-    border-bottom: 3px solid var(--secondary);
-  }
-  &:active {
     border-bottom: 3px solid var(--secondary);
   }
 `;

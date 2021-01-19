@@ -12,7 +12,6 @@ import {
 } from './HeroElements';
 import Video from '../../videos/video.mp4';
 import {Button} from '../ButtonElement';
-import Dashboard from '../../pages/dashboard';
 const HeroSection = () => {
   const [hover, setHover] = useState(false);
   const onHover = () => {
@@ -30,8 +29,7 @@ const HeroSection = () => {
         </HeroP>
         <HeroBtnWrapper>
           <Button
-            to="/app"
-            component={Dashboard}
+            to="home"
             onMouseEnter={onHover}
             onMouseLeave={onHover}
             primary="true"

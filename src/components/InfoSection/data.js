@@ -20,7 +20,7 @@ export const homeObjTwo = {
   lightBg: true,
   lightText: false,
   lightTextDesc: false,
-  topLine: 'Premium Bank',
+  topLine: 'Defi Options',
   headLine: 'Unlimited transactions with zero fees',
   description:
     'Get acces to our exclusive app that allows you to send unlimited transactions without gettingcharged any fees.',
@@ -33,7 +33,7 @@ export const homeObjTwo = {
   darkText: true,
 };
 export const homeObjThree = {
-  id: 'services',
+  id: 'Contact',
   lightBg: false,
   lightText: true,
   lightTextDesc: true,

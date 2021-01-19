@@ -75,3 +75,6 @@ export const ServicesP = styled.p`
   text-align: center;
   font-size: 1rem;
 `;
+export const ServicesDetail = styled.div`
+  text-align: center;
+`;

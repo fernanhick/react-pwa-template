@@ -1,11 +1,10 @@
 import React, {useState} from 'react';
 import Sidebar from '../components/Sidebar';
 import Navbar from '../components/Navbar';
-import {DashboardItem} from '../components/dashboard/DashboardElements';
-import Dashboard from '../components/dashboard';
 import HeroSection from '../components/HeroSection';
 import InfoSection from '../components/InfoSection';
 import Services from '../components/Services';
+import Footer from '../components/Footer';
 import {
   homeObjOne,
   homeObjThree,
@@ -26,6 +25,7 @@ const Home = () => {
       <InfoSection {...homeObjOne} />
       <InfoSection {...homeObjTwo} /> <Services />
       <InfoSection {...homeObjThree} />
+      <Footer />
     </>
   );
 };

@@ -51,8 +51,6 @@ export const Cards = () => {
     setExpanded(!expanded);
   };
 
-  const tokensList = ['bitcoin', 'litecoin', 'ethereum', 'chainlink'];
-
   return (
     <Card className={classes.root}>
       <CardHeader

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<!-- saved from url=(0025)http://localhost:3000/app -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <link rel="icon" type="image/png" href="http://localhost:3000/images/logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#000000">
+    <meta name="description" content="Modern PWA Weather app">
+    <link rel="apple-touch-icon" href="http://localhost:3000/images/logo.png">
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="http://localhost:3000/manifest.json">
+    <!--
+      Notice the use of  in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>ArbiBoard</title>
+  <style>html,
+body,
+#root {
+    margin: 0;
+
+    /* THEME SETTINGS */
+    /*   --black: #010606;
+    --light-text: #f7f8fa;
+    --dark-text: rgb(0, 0, 0);
+    /* The BG defines most of the theme */
+    /* Primary covers primary color for 
+    --primary: rgb(0, 23, 99);
+    --secondary: rgba(0, 255, 242, 0.973);
+    --light-bg: rgb(205, 255, 214); */
+}
+.dark-theme {
+    --black: #010606;
+    --light-text: #f7f8fa;
+    --dark-text: rgb(0, 0, 0);
+    /* The BG defines most of the theme */
+    /* Primary covers primary color for */
+    --primary: rgb(0, 49, 82);
+    --secondary: rgba(0, 174, 255, 0.973);
+    --light-bg: rgb(130, 247, 255);
+}
+.default-theme {
+    --black: #010606;
+    --light-text: #f7f8fa;
+    --dark-text: rgb(0, 0, 0);
+    /* The BG defines most of the theme */
+    /* Primary covers primary color for */
+    --primary: rgba(0, 0, 0);
+    --secondary: rgba(11, 255, 85, 0.973);
+    --light-bg: rgb(205, 255, 214);
+}
+.red-theme {
+    --black: #010606;
+    --light-text: #f7f8fa;
+    --dark-text: rgb(0, 0, 0);
+    /* The BG defines most of the theme */
+    /* Primary covers primary color for */
+    --primary: rgb(99, 0, 0);
+    --secondary: rgba(255, 169, 169, 0.973);
+    --light-bg: rgb(255, 241, 241);
+}
+.green-theme {
+    --black: #010606;
+    --light-text: #f7f8fa;
+    --dark-text: rgb(0, 0, 0);
+    /* The BG defines most of the theme */
+    /* Primary covers primary color for */
+    --primary: rgb(1, 71, 13);
+    --secondary: rgba(37, 255, 8, 0.973);
+    --light-bg: rgb(166, 255, 182);
+}
+.blue-theme {
+    --black: #010606;
+    --light-text: #f7f8fa;
+    --dark-text: rgb(0, 0, 0);
+    /* The BG defines most of the theme */
+    /* Primary covers primary color for */
+    --primary: rgb(0, 12, 175);
+    --secondary: rgba(143, 163, 255, 0.973);
+    --light-bg: rgb(144, 233, 255);
+}
+.light-theme {
+    --black: #010606;
+    --light-text: #000000;
+    --dark-text: rgb(255, 255, 255);
+    /* The BG defines most of the theme */
+    /* Primary covers primary color for */
+    --primary: rgb(255, 255, 255);
+    --secondary: rgba(11, 255, 85, 0.973);
+    --light-bg: rgb(0, 0, 0);
+}
+p #nestedP {
+    color: blue;
+}
+#nestedP {
+    color: red;
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9zcmMvQXBwLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTs7O0lBR0ksU0FBUzs7SUFFVCxtQkFBbUI7SUFDbkI7Ozt5Q0FHcUM7SUFDckM7OztxQ0FHaUM7QUFDckM7QUFDQTtJQUNJLGdCQUFnQjtJQUNoQixxQkFBcUI7SUFDckIseUJBQXlCO0lBQ3pCLHFDQUFxQztJQUNyQyxxQ0FBcUM7SUFDckMseUJBQXlCO0lBQ3pCLHFDQUFxQztJQUNyQyw4QkFBOEI7QUFDbEM7QUFDQTtJQUNJLGdCQUFnQjtJQUNoQixxQkFBcUI7SUFDckIseUJBQXlCO0lBQ3pCLHFDQUFxQztJQUNyQyxxQ0FBcUM7SUFDckMsd0JBQXdCO0lBQ3hCLHFDQUFxQztJQUNyQyw4QkFBOEI7QUFDbEM7QUFDQTtJQUNJLGdCQUFnQjtJQUNoQixxQkFBcUI7SUFDckIseUJBQXlCO0lBQ3pCLHFDQUFxQztJQUNyQyxxQ0FBcUM7SUFDckMsd0JBQXdCO0lBQ3hCLHVDQUF1QztJQUN2Qyw4QkFBOEI7QUFDbEM7QUFDQTtJQUNJLGdCQUFnQjtJQUNoQixxQkFBcUI7SUFDckIseUJBQXlCO0lBQ3pCLHFDQUFxQztJQUNyQyxxQ0FBcUM7SUFDckMseUJBQXlCO0lBQ3pCLG9DQUFvQztJQUNwQyw4QkFBOEI7QUFDbEM7QUFDQTtJQUNJLGdCQUFnQjtJQUNoQixxQkFBcUI7SUFDckIseUJBQXlCO0lBQ3pCLHFDQUFxQztJQUNyQyxxQ0FBcUM7SUFDckMsMEJBQTBCO0lBQzFCLHVDQUF1QztJQUN2Qyw4QkFBOEI7QUFDbEM7QUFDQTtJQUNJLGdCQUFnQjtJQUNoQixxQkFBcUI7SUFDckIsK0JBQStCO0lBQy9CLHFDQUFxQztJQUNyQyxxQ0FBcUM7SUFDckMsNkJBQTZCO0lBQzdCLHFDQUFxQztJQUNyQyx3QkFBd0I7QUFDNUI7QUFDQTtJQUNJLFdBQVc7QUFDZjtBQUNBO0lBQ0ksVUFBVTtBQUNkIiwic291cmNlc0NvbnRlbnQiOlsiaHRtbCxcclxuYm9keSxcclxuI3Jvb3Qge1xyXG4gICAgbWFyZ2luOiAwO1xyXG5cclxuICAgIC8qIFRIRU1FIFNFVFRJTkdTICovXHJcbiAgICAvKiAgIC0tYmxhY2s6ICMwMTA2MDY7XHJcbiAgICAtLWxpZ2h0LXRleHQ6ICNmN2Y4ZmE7XHJcbiAgICAtLWRhcmstdGV4dDogcmdiKDAsIDAsIDApO1xyXG4gICAgLyogVGhlIEJHIGRlZmluZXMgbW9zdCBvZiB0aGUgdGhlbWUgKi9cclxuICAgIC8qIFByaW1hcnkgY292ZXJzIHByaW1hcnkgY29sb3IgZm9yIFxyXG4gICAgLS1wcmltYXJ5OiByZ2IoMCwgMjMsIDk5KTtcclxuICAgIC0tc2Vjb25kYXJ5OiByZ2JhKDAsIDI1NSwgMjQyLCAwLjk3Myk7XHJcbiAgICAtLWxpZ2h0LWJnOiByZ2IoMjA1LCAyNTUsIDIxNCk7ICovXHJcbn1cclxuLmRhcmstdGhlbWUge1xyXG4gICAgLS1ibGFjazogIzAxMDYwNjtcclxuICAgIC0tbGlnaHQtdGV4dDogI2Y3ZjhmYTtcclxuICAgIC0tZGFyay10ZXh0OiByZ2IoMCwgMCwgMCk7XHJcbiAgICAvKiBUaGUgQkcgZGVmaW5lcyBtb3N0IG9mIHRoZSB0aGVtZSAqL1xyXG4gICAgLyogUHJpbWFyeSBjb3ZlcnMgcHJpbWFyeSBjb2xvciBmb3IgKi9cclxuICAgIC0tcHJpbWFyeTogcmdiKDAsIDQ5LCA4Mik7XHJcbiAgICAtLXNlY29uZGFyeTogcmdiYSgwLCAxNzQsIDI1NSwgMC45NzMpO1xyXG4gICAgLS1saWdodC1iZzogcmdiKDEzMCwgMjQ3LCAyNTUpO1xyXG59XHJcbi5kZWZhdWx0LXRoZW1lIHtcclxuICAgIC0tYmxhY2s6ICMwMTA2MDY7XHJcbiAgICAtLWxpZ2h0LXRleHQ6ICNmN2Y4ZmE7XHJcbiAgICAtLWRhcmstdGV4dDogcmdiKDAsIDAsIDApO1xyXG4gICAgLyogVGhlIEJHIGRlZmluZXMgbW9zdCBvZiB0aGUgdGhlbWUgKi9cclxuICAgIC8qIFByaW1hcnkgY292ZXJzIHByaW1hcnkgY29sb3IgZm9yICovXHJcbiAgICAtLXByaW1hcnk6IHJnYmEoMCwgMCwgMCk7XHJcbiAgICAtLXNlY29uZGFyeTogcmdiYSgxMSwgMjU1LCA4NSwgMC45NzMpO1xyXG4gICAgLS1saWdodC1iZzogcmdiKDIwNSwgMjU1LCAyMTQpO1xyXG59XHJcbi5yZWQtdGhlbWUge1xyXG4gICAgLS1ibGFjazogIzAxMDYwNjtcclxuICAgIC0tbGlnaHQtdGV4dDogI2Y3ZjhmYTtcclxuICAgIC0tZGFyay10ZXh0OiByZ2IoMCwgMCwgMCk7XHJcbiAgICAvKiBUaGUgQkcgZGVmaW5lcyBtb3N0IG9mIHRoZSB0aGVtZSAqL1xyXG4gICAgLyogUHJpbWFyeSBjb3ZlcnMgcHJpbWFyeSBjb2xvciBmb3IgKi9cclxuICAgIC0tcHJpbWFyeTogcmdiKDk5LCAwLCAwKTtcclxuICAgIC0tc2Vjb25kYXJ5OiByZ2JhKDI1NSwgMTY5LCAxNjksIDAuOTczKTtcclxuICAgIC0tbGlnaHQtYmc6IHJnYigyNTUsIDI0MSwgMjQxKTtcclxufVxyXG4uZ3JlZW4tdGhlbWUge1xyXG4gICAgLS1ibGFjazogIzAxMDYwNjtcclxuICAgIC0tbGlnaHQtdGV4dDogI2Y3ZjhmYTtcclxuICAgIC0tZGFyay10ZXh0OiByZ2IoMCwgMCwgMCk7XHJcbiAgICAvKiBUaGUgQkcgZGVmaW5lcyBtb3N0IG9mIHRoZSB0aGVtZSAqL1xyXG4gICAgLyogUHJpbWFyeSBjb3ZlcnMgcHJpbWFyeSBjb2xvciBmb3IgKi9cclxuICAgIC0tcHJpbWFyeTogcmdiKDEsIDcxLCAxMyk7XHJcbiAgICAtLXNlY29uZGFyeTogcmdiYSgzNywgMjU1LCA4LCAwLjk3Myk7XHJcbiAgICAtLWxpZ2h0LWJnOiByZ2IoMTY2LCAyNTUsIDE4Mik7XHJcbn1cclxuLmJsdWUtdGhlbWUge1xyXG4gICAgLS1ibGFjazogIzAxMDYwNjtcclxuICAgIC0tbGlnaHQtdGV4dDogI2Y3ZjhmYTtcclxuICAgIC0tZGFyay10ZXh0OiByZ2IoMCwgMCwgMCk7XHJcbiAgICAvKiBUaGUgQkcgZGVmaW5lcyBtb3N0IG9mIHRoZSB0aGVtZSAqL1xyXG4gICAgLyogUHJpbWFyeSBjb3ZlcnMgcHJpbWFyeSBjb2xvciBmb3IgKi9cclxuICAgIC0tcHJpbWFyeTogcmdiKDAsIDEyLCAxNzUpO1xyXG4gICAgLS1zZWNvbmRhcnk6IHJnYmEoMTQzLCAxNjMsIDI1NSwgMC45NzMpO1xyXG4gICAgLS1saWdodC1iZzogcmdiKDE0NCwgMjMzLCAyNTUpO1xyXG59XHJcbi5saWdodC10aGVtZSB7XHJcbiAgICAtLWJsYWNrOiAjMDEwNjA2O1xyXG4gICAgLS1saWdodC10ZXh0OiAjMDAwMDAwO1xyXG4gICAgLS1kYXJrLXRleHQ6IHJnYigyNTUsIDI1NSwgMjU1KTtcclxuICAgIC8qIFRoZSBCRyBkZWZpbmVzIG1vc3Qgb2YgdGhlIHRoZW1lICovXHJcbiAgICAvKiBQcmltYXJ5IGNvdmVycyBwcmltYXJ5IGNvbG9yIGZvciAqL1xyXG4gICAgLS1wcmltYXJ5OiByZ2IoMjU1LCAyNTUsIDI1NSk7XHJcbiAgICAtLXNlY29uZGFyeTogcmdiYSgxMSwgMjU1LCA4NSwgMC45NzMpO1xyXG4gICAgLS1saWdodC1iZzogcmdiKDAsIDAsIDApO1xyXG59XHJcbnAgI25lc3RlZFAge1xyXG4gICAgY29sb3I6IGJsdWU7XHJcbn1cclxuI25lc3RlZFAge1xyXG4gICAgY29sb3I6IHJlZDtcclxufVxyXG4iXSwic291cmNlUm9vdCI6IiJ9 */</style><style data-styled="active" data-styled-version="5.2.1">.iKRJIE{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;height:100%;width:100%;background:#000);;}.kIDzKW{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;padding:7%;}.cbicza{background:var(--primary);height:80px;margin-top:-80px;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;font-size:1rem;position:-webkit-sticky;position:sticky;top:0;z-index:10;}@media screen and (max-width:960px){.cbicza{-webkit-transition:0.8s all ease;transition:0.8s all ease;}}.fKHNPb{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;height:80px;z-index:1;width:100%;max-width:1300px;padding:0 24px;}.gkuWRy{color:var(--light-text);justify-self:flex-start;cursor:pointer;font-size:1.5rem;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;margin-left:24px;font-weight:bold;-webkit-text-decoration:none;text-decoration:none;}.doFbKR{display:none;}@media screen and (max-width:768px){.doFbKR{position:absolute;display:block;top:0;right:0;-webkit-transform:translate(-100%,60%);-ms-transform:translate(-100%,60%);transform:translate(-100%,60%);font-size:1.8rem;cursor:pointer;color:var(--light-text);}}.fIPrJo{text-align:center;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;margin-right:-22px;list-style:none;}@media screen and (max-width:768px){.fIPrJo{display:none;}}.jPJSgN{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}@media screen and (max-width:768px){.jPJSgN{display:none;}}.iNbvpK{border-radius:50px;background:var(--secondary);white-space:nowrap;padding:10px 22px;color:var(--dark-text);font-size:16px;outline:none;cursor:pointer;border:none;-webkit-transition:all 0.2s ease-in-out;transition:all 0.2s ease-in-out;-webkit-text-decoration:none;text-decoration:none;}.iNbvpK:hover{-webkit-transition:100 0.2s ease-in-out;transition:100 0.2s ease-in-out;-webkit-transform:scale(1.02);-ms-transform:scale(1.02);transform:scale(1.02);box-shadow: 5px 5px 8px var(--primary);background:var(--secondary);color:var(--dark-text);}.jgGEUs{height:80px;}.eVSvaL{color:var(--light-text);cursor:pointer;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;padding:0 1rem;height:100%;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-text-decoration:none;text-decoration:none;}.eVSvaL:hover{border-bottom:3px solid var(--secondary);}</style></head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"> <nav class="sc-jrAGrp cbicza"><div class="sc-kEjbxe fKHNPb"><a class="sc-iqHYGH gkuWRy" href="http://localhost:3000/">ArbiBoard</a><div class="sc-crrsfI doFbKR"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"></path></svg></div><ul class="sc-bqyKva fIPrJo"><li class="sc-fFubgz jgGEUs"><a class="sc-bkzZxe eVSvaL">About</a></li><li class="sc-fFubgz jgGEUs"><a class="sc-bkzZxe eVSvaL">Discover</a></li><li class="sc-fFubgz jgGEUs"><a class="sc-bkzZxe eVSvaL">Services</a></li><li class="sc-fFubgz jgGEUs"><a class="sc-bkzZxe eVSvaL">Sign Up</a></li></ul><nav class="sc-kstrdz jPJSgN"><a class="sc-fodVxV iNbvpK" href="http://localhost:3000/app">Go To Dashboard</a></nav></div></nav><div class="sc-bdfBwQ iKRJIE"><div class="sc-gsTCUz kIDzKW"><div class="card-title">TOKEN CARDS</div><div class="card-body"><h2>Dai price: $1.00</h2><h2>Eth price: $1352.08</h2><h2>Dai total liquidity: 165255161</h2></div></div></div></div>
+
+    <script>
+      if('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('./serviceworker.js')
+          .then((reg) =>  console.log('Succes: ', reg.scope)
+            
+          ).catch((err) =>  console.log('Failure: ', err)
+            
+          );
+        })
+      }
+    </script>
+  <script src="./ArbiBoard_files/bundle.js.download"></script><script src="./ArbiBoard_files/0.chunk.js.download"></script><script src="./ArbiBoard_files/main.chunk.js.download"></script>
+
+</body></html>

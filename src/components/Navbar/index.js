@@ -10,7 +10,11 @@ import {
   NavLinks,
   NavMenu,
 } from './NavbarElements';
+import FormGroup from '@material-ui/core/FormGroup';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import Switch from '@material-ui/core/Switch';
 import {FaBars} from 'react-icons/fa';
+
 const Navbar = ({toggle}) => {
   return (
     <>
@@ -34,8 +38,9 @@ const Navbar = ({toggle}) => {
               <NavLinks to="signup">Sign Up</NavLinks>
             </NavItem>
           </NavMenu>
+
           <NavBtn>
-            <NavBtnLink to="/signin">Sign In</NavBtnLink>
+            <NavBtnLink to="/app">Go To Dashboard</NavBtnLink>
           </NavBtn>
         </NavbarContainer>
       </Nav>
