@@ -69,9 +69,9 @@ body,
     --dark-text: rgb(255, 255, 255);
     /* The BG defines most of the theme */
     /* Primary covers primary color for */
-    --primary: rgb(255, 255, 255);
-    --secondary: rgba(11, 255, 85, 0.973);
-    --light-bg: rgb(0, 0, 0);
+    --primary: rgb(0, 122, 126);
+    --secondary: rgba(0, 199, 206, 0.973);
+    --light-bg: rgb(121, 251, 255);
 }
 p #nestedP {
     color: blue;

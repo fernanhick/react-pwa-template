@@ -1,9 +1,3 @@
-import {
-  DashboardContainer,
-  DashboardItem,
-} from '../components/dashboard/DashboardElements';
-import Navbar from '../components/Navbar';
-import Dashboard1 from '../components/dashboard/index';
 const Dashboard = (m) => {
   const pricesWs = new WebSocket(
     'wss://ws.coincap.io/prices?assets=bitcoin,ethereum,monero,litecoin'
@@ -17,12 +11,7 @@ const Dashboard = (m) => {
     }
   };
 
-  return (
-    <>
-      <Navbar />
-      <Dashboard1 />
-    </>
-  );
+  return <></>;
 };
 
 export default Dashboard;

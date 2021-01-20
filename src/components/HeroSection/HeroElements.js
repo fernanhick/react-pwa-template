@@ -38,6 +38,25 @@ export const HeroBg = styled.div`
   height: 100%;
   overflow: hidden;
 `;
+export const Bg = styled.div`
+  animation: slide 3s ease-in-out infinite alternate;
+  background-image: linear-gradient(-60deg, #6c3 50%, #09f 50%);
+  bottom: 0;
+  left: -50%;
+  opacity: 0.5;
+  position: fixed;
+  right: -50%;
+  top: 0;
+  z-index: -1;
+`;
+
+export const Bg2 = styled.div`
+  animation-direction: alternate-reverse;
+  animation-duration: 4s;
+`;
+export const Bg3 = styled.div`
+  animation-duration: 5s;
+`;
 
 export const VideoBg = styled.video`
   width: 100%;

@@ -1,14 +1,10 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import './App.css';
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import Home from './pages';
 import Dashboard from './pages/dashboard';
 
 const App = () => {
-  const [isOpen, setIsOpen] = useState(true);
-  const toggle = () => {
-    setIsOpen(!isOpen);
-  };
   return (
     <Router>
       <Switch>

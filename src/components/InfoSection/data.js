@@ -3,10 +3,10 @@ export const homeObjOne = {
   lightBg: false,
   lightText: true,
   lightTextDesc: true,
-  topLine: 'Premium Bank',
-  headLine: 'Unlimited transactions with zero fees',
+  topLine: 'Finance 2.0',
+  headLine: 'New era to the decentralized finance',
   description:
-    'Get acces to our exclusive app that allows you to send unlimited transactions without gettingcharged any fees.',
+    'Get access to the most popular smart contract protocols from the top leading Defi platforms in one dashboard,  earn from multiple passive strategies like liquidity provider, staking, lending, borrowing...',
   buttonLabel: 'Learn More',
   imgStart: false,
   img: require('../../images/svg-1.svg'),
@@ -21,9 +21,9 @@ export const homeObjTwo = {
   lightText: false,
   lightTextDesc: false,
   topLine: 'Defi Options',
-  headLine: 'Unlimited transactions with zero fees',
+  headLine: 'All services found in the Defi world',
   description:
-    'Get acces to our exclusive app that allows you to send unlimited transactions without gettingcharged any fees.',
+    'Access to services from Decentralized platforms, Token prices, Comparison of the market and more...',
   buttonLabel: 'Get started',
   imgStart: true,
   img: require('../../images/svg-2.svg'),
@@ -33,7 +33,7 @@ export const homeObjTwo = {
   darkText: true,
 };
 export const homeObjThree = {
-  id: 'Contact',
+  id: 'signup',
   lightBg: false,
   lightText: true,
   lightTextDesc: true,

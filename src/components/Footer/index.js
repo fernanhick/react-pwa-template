@@ -21,7 +21,12 @@ import {
   FaTwitter,
   FaYoutube,
 } from 'react-icons/fa';
+import {animateScroll as scroll} from 'react-scroll';
+
 function Footer() {
+  const toggleHome = () => {
+    scroll.scrollToTop();
+  };
   return (
     <>
       <FooterContainer>
@@ -32,9 +37,8 @@ function Footer() {
                 <FooterLinkTitle> About Us </FooterLinkTitle>
 
                 <FooterLink to="/app">How it works</FooterLink>
-                <FooterLink to="/app">Testimonials</FooterLink>
-                <FooterLink to="/app">Careers</FooterLink>
-                <FooterLink to="/app">Investors</FooterLink>
+                <FooterLink to="/app">Sections</FooterLink>
+                <FooterLink to="/app">Investment</FooterLink>
                 <FooterLink to="/app">Terms of Service</FooterLink>
               </FooterLinkItems>
               <FooterLinkItems>
@@ -42,7 +46,7 @@ function Footer() {
 
                 <FooterLink to="/app">Contact</FooterLink>
                 <FooterLink to="/app">Support</FooterLink>
-                <FooterLink to="/app">Destinations</FooterLink>
+                <FooterLink to="/app">Newsletter</FooterLink>
                 <FooterLink to="/app">Sponsorships</FooterLink>
               </FooterLinkItems>
               <FooterLinkItems>
@@ -65,24 +69,30 @@ function Footer() {
           </FoooterLinksContainer>
           <SocialMedia>
             <SocialMediaWrap>
-              <SocialLogo to="/">ArbiBoard</SocialLogo>
+              <SocialLogo to="/" onClick={toggleHome}>
+                ArbiBoard
+              </SocialLogo>
               <WebsiteRights>
                 ArbiBoar C {new Date().getFullYear()}
               </WebsiteRights>
               <SocialIcons>
-                <SocialIconLink href="/" target="_blank" aria-label="Facebook">
+                <SocialIconLink
+                  to="/home"
+                  target="_blank"
+                  aria-label="Facebook"
+                >
                   <FaFacebook />
                 </SocialIconLink>
-                <SocialIconLink href="/" target="_blank" aria-label="Instagram">
+                <SocialIconLink to="/#" target="_blank" aria-label="Instagram">
                   <FaInstagram />
                 </SocialIconLink>
-                <SocialIconLink href="/" target="_blank" aria-label="Youtube">
+                <SocialIconLink to="/#" target="_blank" aria-label="Youtube">
                   <FaYoutube />
                 </SocialIconLink>
-                <SocialIconLink href="/" target="_blank" aria-label="Twitter">
+                <SocialIconLink to="/#" target="_blank" aria-label="Twitter">
                   <FaTwitter />
                 </SocialIconLink>
-                <SocialIconLink href="/" target="_blank" aria-label="Linkedin">
+                <SocialIconLink to="/#" target="_blank" aria-label="Linkedin">
                   <FaLinkedin />
                 </SocialIconLink>
               </SocialIcons>
