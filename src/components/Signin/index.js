@@ -33,8 +33,8 @@ const SignIn = () => {
   return (
     <>
       <Container>
+        <Icon to="/">ArbiBoard</Icon>
         <FormWrap>
-          <Icon to="/">ArbiBoard</Icon>
           <FormContent>
             <Form action="#">
               <FormH1>Sign in to your account</FormH1>

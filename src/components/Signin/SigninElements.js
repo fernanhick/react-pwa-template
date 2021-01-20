@@ -11,11 +11,14 @@ export const Container = styled.div`
   bottom: 0;
   right: 0;
   overflow: hidden;
+  padding-left: 32px;
+  padding-top: 32px;
 `;
 export const FormWrap = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
+
   justify-content: center;
   @media screen and (max-width: 400px) {
     height: 80%;
@@ -23,8 +26,7 @@ export const FormWrap = styled.div`
 `;
 export const Icon = styled(Link)`
   color: #fff;
-  margin-left: 32px;
-  margin-top: 32px;
+
   text-decoration: none;
   font-weight: 700;
   font-size: 32px;
@@ -74,10 +76,9 @@ export const FormH1 = styled.h1`
   text-align: center;
 `;
 export const FormLabel = styled.label`
-  padding: 16px 16px;
-  margin-bottom: 32px;
+  padding: 0 16px;
+  margin-bottom: 10px;
   border: none;
-  border-top: 1px solid;
   border-radius: 4px;
   font-size: 20px;
 `;
