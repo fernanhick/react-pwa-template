@@ -28,7 +28,7 @@ Depending on what you are making, it can be a good idea to include screenshots o
 Clone repository
 
 ```bash
-git clone https://github.com/fernanhick/dash-react-pwa.git
+git clone https://github.com/fernanhick/react-pwa-template
 ```
 
 cd Directory
