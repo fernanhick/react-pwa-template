@@ -25,13 +25,15 @@ export const FormWrap = styled.div`
   }
 `;
 export const Icon = styled(Link)`
-  color: #fff;
-
+  color: var(--text-light);
+  border: dashed;
   text-decoration: none;
   font-weight: 700;
   font-size: 32px;
   @media screen and (max-width: 480px) {
     margin: 16px 0 0 8px;
+  }
+  &:hover {
   }
 `;
 

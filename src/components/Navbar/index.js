@@ -11,6 +11,7 @@ import {
   NavBtnLink,
   NavItem,
   NavLinks,
+  NavLogoText,
   NavMenu,
 } from './NavbarElements';
 const Navbar = ({toggle}) => {
@@ -36,7 +37,7 @@ const Navbar = ({toggle}) => {
         <Nav scrollNav={scrollNav}>
           <NavbarContainer>
             <NavbarLogo to="/" onClick={toggleHome}>
-              ArbiBoard
+              <NavLogoText>ArbiBoard</NavLogoText>
             </NavbarLogo>
             <MobileIcon onClick={toggle}>
               <FaBars />

@@ -29,7 +29,7 @@ export const NavbarContainer = styled.div`
   padding: 0 24px;
 `;
 export const NavbarLogo = styled(LinkR)`
-  color: var(--light-text);
+  color: var(--text-light);
   justify-self: flex-start;
   cursor: pointer;
   font-size: 1.5rem;
@@ -39,7 +39,9 @@ export const NavbarLogo = styled(LinkR)`
   font-weight: bold;
   text-decoration: none;
 `;
-
+export const NavLogoText = styled.span`
+  border: dashed;
+`;
 export const MobileIcon = styled.div`
   display: none;
   @media screen and (max-width: 768px) {
