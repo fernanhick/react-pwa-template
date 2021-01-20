@@ -24,7 +24,7 @@ export const homeObjTwo = {
   headLine: 'All services found in the Defi world',
   description:
     'Access to services from Decentralized platforms, Token prices, Comparison of the market and more...',
-  buttonLabel: 'Get started',
+  buttonLabel: 'Learn More',
   imgStart: true,
   img: require('../../images/svg-2.svg'),
   alt: 'Chart',

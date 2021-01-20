@@ -21,7 +21,7 @@ body,
     /* Primary covers primary color for */
     --primary: rgb(0, 49, 82);
     --secondary: rgba(140, 185, 206, 0.973);
-    --light-bg: rgb(130, 247, 255);
+    --light-bg: rgb(176, 250, 255);
 }
 .light-theme {
     --black: #010606;
@@ -29,7 +29,7 @@ body,
     --dark-text: rgb(58, 58, 58);
     /* The BG defines most of the theme */
     /* Primary covers primary color for */
-    --primary: rgb(85, 182, 185);
-    --secondary: rgb(104, 250, 255);
+    --primary: rgba(85, 182, 185, 1);
+    --secondary: rgba(102, 250, 255, 1);
     --light-bg: rgb(181, 250, 221);
 }

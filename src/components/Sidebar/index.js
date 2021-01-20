@@ -60,7 +60,7 @@ const Sidebar = ({isOpen, toggle, a, d, themeName}) => {
         </SidebarMenu>
 
         <SideBtnWrap>
-          <SidebarRoute to="/app">Go To App</SidebarRoute>
+          <SidebarRoute to="/app">Sign In</SidebarRoute>
         </SideBtnWrap>
       </SidebarWrapper>
       <SidebarLink id="theme-mode" to="home" onClick={toggleTheme}>

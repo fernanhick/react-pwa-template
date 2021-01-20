@@ -1,3 +1,6 @@
+import Footer from '../components/Footer';
+import SignIn from '../components/Signin';
+
 const Dashboard = (m) => {
   const pricesWs = new WebSocket(
     'wss://ws.coincap.io/prices?assets=bitcoin,ethereum,monero,litecoin'
@@ -11,7 +14,12 @@ const Dashboard = (m) => {
     }
   };
 
-  return <></>;
+  return (
+    <>
+      <SignIn />
+      <Footer />
+    </>
+  );
 };
 
 export default Dashboard;

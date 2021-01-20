@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {Button} from '../ButtonElement';
+import {ButtonR} from '../ButtonElement';
 import {
   ArrowForward,
   ArrowRight,
@@ -16,7 +16,7 @@ const HeroSection = () => {
     setHover(!hover);
   };
   return (
-    <HeroiContainer>
+    <HeroiContainer id="home">
       <HeroBg>
         {/* <VideoBg autoPlay loop muted src={Video} type="video/mp4"></VideoBg> */}
       </HeroBg>
@@ -27,15 +27,15 @@ const HeroSection = () => {
           market
         </HeroP>
         <HeroBtnWrapper>
-          <Button
-            to="home"
+          <ButtonR
+            to="/app"
             onMouseEnter={onHover}
             onMouseLeave={onHover}
             primary="true"
             dark="true"
           >
             Get Started {hover ? <ArrowForward /> : <ArrowRight />}
-          </Button>
+          </ButtonR>
         </HeroBtnWrapper>
       </HeroContent>
     </HeroiContainer>
