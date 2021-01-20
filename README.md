@@ -43,6 +43,18 @@ Use Node.js install for dependencies installation.
 npm install
 ```
 
+Run the node.js server
+
+```bash
+npm start
+```
+
+Go to your browser and open
+
+```url
+http://localhost:3000/
+```
+
 ## Usage
 
 Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
@@ -61,5 +73,6 @@ Show your appreciation to those who have contributed to the project.
 
 ## License
 
-#Project status
+# Project status
+
 This is an ongoing project along with other projects for merge into a main one.
