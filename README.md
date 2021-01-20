@@ -17,7 +17,6 @@ This is a React Progressive Web Application template, includes the different sec
 
 On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
 
-The project currently doesn't include a test module.
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=fernanhick&theme=tokyonight)
 
 # Visuals
