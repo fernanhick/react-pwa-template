@@ -26,7 +26,7 @@ body,
 .light-theme {
     --black: #010606;
     --light-text: #000000;
-    --dark-text: rgb(255, 255, 255);
+    --dark-text: rgb(58, 58, 58);
     /* The BG defines most of the theme */
     /* Primary covers primary color for */
     --primary: rgb(85, 182, 185);
