@@ -1,15 +1,17 @@
 # PWA-React-Layout-Template
 
+Basic Template using the create web app builder and adding some components for functionability.
+
 ## Description
 
 This is a React Progressive Web Application template, includes the different section a layout its required for a landing page.
-Components included:
 
-- Navbar
-  HeroSection
-  InfoSection
-  Footer
-- Sidebar
+- Components included:
+  -Navbar
+  -HeroSection
+  -InfoSection
+  -Footer
+  -Sidebar
 
 # Badges
 
