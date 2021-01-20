@@ -93,7 +93,7 @@ const Navbar = ({toggle}) => {
             </NavMenu>
 
             <NavBtn>
-              <NavBtnLink to="/app">Go To Dashboard</NavBtnLink>
+              <NavBtnLink to="/app">Sign In</NavBtnLink>
             </NavBtn>
           </NavbarContainer>
         </Nav>
