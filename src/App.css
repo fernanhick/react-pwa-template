@@ -20,7 +20,7 @@ body,
     /* The BG defines most of the theme */
     /* Primary covers primary color for */
     --primary: rgb(0, 49, 82);
-    --secondary: rgba(0, 174, 255, 0.973);
+    --secondary: rgba(140, 185, 206, 0.973);
     --light-bg: rgb(130, 247, 255);
 }
 .light-theme {
