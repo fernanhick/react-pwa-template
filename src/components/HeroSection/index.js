@@ -23,7 +23,8 @@ const HeroSection = () => {
       <HeroContent>
         <HeroH1>Defi Options Made Easy</HeroH1>
         <HeroP>
-          Sign in for a overview of the Dashboard for DeFi options in the market
+          Sign in for a overview of the Dashboard for DeFi services in the
+          market
         </HeroP>
         <HeroBtnWrapper>
           <Button
