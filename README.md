@@ -49,7 +49,9 @@ Run the node.js server
 npm start
 ```
 
-Go to your browser and open
+This will open the project in a new browser tab.
+
+If the tab doesn't open, Open your browser and go to:
 
 ```url
 http://localhost:3000/
