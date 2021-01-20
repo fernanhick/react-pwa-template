@@ -31,7 +31,13 @@ Clone repository
 git clone https://github.com/fernanhick/dash-react-pwa.git
 ```
 
-Use Node.js install for dependency installation handling.
+cd Directory
+
+```bash
+cd dash-react-pwa
+```
+
+Use Node.js install for dependencies installation.
 
 ```bash
 npm install
