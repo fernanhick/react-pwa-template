@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/react-pwa-template/static/css/main.dae6dac7.chunk.css",
+    "main.js": "/react-pwa-template/static/js/main.d704cc94.chunk.js",
+    "main.js.map": "/react-pwa-template/static/js/main.d704cc94.chunk.js.map",
+    "runtime-main.js": "/react-pwa-template/static/js/runtime-main.0adb33c0.js",
+    "runtime-main.js.map": "/react-pwa-template/static/js/runtime-main.0adb33c0.js.map",
+    "static/js/2.dfdf28ee.chunk.js": "/react-pwa-template/static/js/2.dfdf28ee.chunk.js",
+    "static/js/2.dfdf28ee.chunk.js.map": "/react-pwa-template/static/js/2.dfdf28ee.chunk.js.map",
+    "index.html": "/react-pwa-template/index.html",
+    "static/css/main.dae6dac7.chunk.css.map": "/react-pwa-template/static/css/main.dae6dac7.chunk.css.map",
+    "static/js/2.dfdf28ee.chunk.js.LICENSE.txt": "/react-pwa-template/static/js/2.dfdf28ee.chunk.js.LICENSE.txt",
+    "static/media/svg-1.svg": "/react-pwa-template/static/media/svg-1.f0f1b63a.svg",
+    "static/media/svg-2.svg": "/react-pwa-template/static/media/svg-2.7a93f892.svg",
+    "static/media/svg-3.svg": "/react-pwa-template/static/media/svg-3.d19f5555.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0adb33c0.js",
+    "static/js/2.dfdf28ee.chunk.js",
+    "static/css/main.dae6dac7.chunk.css",
+    "static/js/main.d704cc94.chunk.js"
+  ]
+}
